@@ -23,5 +23,34 @@ class HobbitTest < Minitest::Test
     hobbit = Hobbit.new("Frodo", "adventurous")
     assert_equal "adventurous", hobbit.disposition
   end
+
+  def test_grows_older_when_celebrating_birthdays
+    hobbit = Hobbit.new('Merry')
+    assert_equal 0, hobbit.age
+    5.times do
+      hobbit.celebrate_birthday
+    end
+    assert_equal 5, hobbit.age
+  end
+
+  def test_is_considered_a_child_at_32
+    hobbit = Hobbit.new('Gerontius')
+    32.times do
+      hobbit.celebrate_birthday
+    end
+    refute hobbit.adult?
+  end
+
+  def test_comes_of_age_at_33
+    hobbit = Hobbit.new('Otho')
+    33.times do
+      hobbit.celebrate_birthday
+    end
+    assert hobbit.adult?
+
+    # still adult, one year later
+    hobbit.celebrate_birthday
+    assert hobbit.adult?
+  end
 end
 
