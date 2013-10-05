@@ -1,7 +1,6 @@
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../lib/unicorn'
 
 class UnicornTest < Minitest::Test
 

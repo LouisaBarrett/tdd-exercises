@@ -1,7 +1,6 @@
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../lib/wizard'
 
 class WizardTest < Minitest::Test
   def test_has_name
