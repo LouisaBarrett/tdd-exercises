@@ -2,6 +2,18 @@
 
 A collection of simple exercises to practice TDD
 
+## Suggested Order
+
+* Unicorn
+* Vampire
+* Dragon
+* Hobbit
+* Pirate
+* Wizard
+* Medusa
+* Werewolf
+* Centaur
+
 ## License
 
 The MIT License (MIT)
