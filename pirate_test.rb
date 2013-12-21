@@ -29,18 +29,18 @@ class PirateTest < Minitest::Test
   def test_isnt_cursed_by_default
     skip
     pirate = Pirate.new("Jack")
-    refute pirate.cursed
+    refute pirate.cursed?
   end
 
   def test_becomes_cursed_after_enough_heinous_acts
     skip
     pirate = Pirate.new("Jack")
-    refute pirate.cursed
+    refute pirate.cursed?
     pirate.commit_heinous_act
-    refute pirate.cursed
+    refute pirate.cursed?
     pirate.commit_heinous_act
-    refute pirate.cursed
+    refute pirate.cursed?
     pirate.commit_heinous_act
-    assert pirate.cursed
+    assert pirate.cursed?
   end
 end

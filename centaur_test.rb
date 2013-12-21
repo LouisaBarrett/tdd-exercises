@@ -44,11 +44,13 @@ class CentaurTest < Minitest::Test
 
   def test_when_cranky_it_will_not_shoot_a_bow
     centaur = Centaur.new("George","Palomino")
+    3.times { centaur.shoot }
     assert_equal "NO!", centaur.shoot
   end
 
   def test_when_cranky_it_will_not_run
     centaur = Centaur.new("George","Palomino")
+    3.times { centaur.shoot }
     assert_equal "NO!", centaur.run
   end
 
