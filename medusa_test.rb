@@ -1,6 +1,7 @@
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
+require './medusa'
 
 class MedusaTest < Minitest::Test
   def test_it_has_a_name
@@ -9,27 +10,27 @@ class MedusaTest < Minitest::Test
   end
 
   def test_can_stare
-    skip
+    # skip
     medusa = Medusa.new("Cassiopeia")
 
     assert medusa.respond_to?(:stare)
   end
 
   def test_has_statues
-    skip
+    # skip
     medusa = Medusa.new("Cassiopeia")
 
     assert medusa.respond_to?(:statues)
   end
 
   def test_when_first_created_she_has_no_statues
-    skip
+    # skip
     medusa = Medusa.new("Cassiopeia")
     assert medusa.statues.empty?
   end
 
   def test_when_staring_at_a_person_she_gains_a_statue
-    skip
+    # skip
     medusa = Medusa.new("Cassiopeia")
     victim = Person.new("Perseus")
 
@@ -39,7 +40,7 @@ class MedusaTest < Minitest::Test
   end
 
   def test_when_staring_at_a_person_that_person_turns_to_stone
-    skip
+    # skip
     medusa = Medusa.new("Cassiopeia")
     victim = Person.new("Perseus")
 
